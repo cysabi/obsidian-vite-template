@@ -3,7 +3,7 @@ import builtins from "builtin-modules";
 import { resolve } from "node:path";
 import { readFileSync } from "node:fs";
 
-const outDir = "MyVault/.obsidian/plugins/obsidian-vite-template"; // TODO: change me!
+const outDir = `${"MyVault"}/.obsidian/plugins/${"vite-plugin-template"}`; // TODO
 
 export default defineConfig({
   plugins: [writeObsidianAssets()],
@@ -57,7 +57,7 @@ function writeObsidianAssets() {
     apply: "build",
     async generateBundle() {
       const pkg = JSON.parse(
-        readFileSync(resolve(process.cwd(), "package.json"), "utf-8")
+        readFileSync(resolve(process.cwd(), "package.json"))
       );
 
       const manifest = {
