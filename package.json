@@ -1,11 +1,5 @@
 {
-  "name": "obsidian-vite-template",
   "version": "0.1.0",
-  "author": {
-    "name": "cysabi",
-    "url": "https://cysabi.github.io"
-  },
-  "funding": "https://github.com/sponsors/cysabi",
   "devDependencies": {
     "@types/node": "^16.11.6",
     "builtin-modules": "3.3.0",
@@ -15,7 +9,12 @@
   },
   "obsidian": {
     "name": "Obsidian Vite Template",
+    "author": "cysabi",
     "minAppVersion": "1.0.0",
-    "isDesktopOnly": false
+    "description": "A modern plugin/theme template for Obsidian",
+    "id": "obsidian-vite-template",
+    "isDesktopOnly": false,
+    "authorUrl": "https://cysabi.github.io",
+    "fundingUrl": "https://github.com/sponsors/cysabi"
   }
 }

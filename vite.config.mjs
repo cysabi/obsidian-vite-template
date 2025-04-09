@@ -3,7 +3,7 @@ import builtins from "builtin-modules";
 import { resolve } from "node:path";
 import { readFileSync } from "node:fs";
 
-const outDir = `${"MyVault"}/.obsidian/plugins/${"vite-plugin-template"}`; // TODO
+const outDir = ""; // TODO
 
 export default defineConfig({
   plugins: [writeObsidianAssets()],
@@ -61,12 +61,7 @@ function writeObsidianAssets() {
       );
 
       const manifest = {
-        id: pkg.name,
         version: pkg.version,
-        description: pkg.description,
-        author: pkg.author.name,
-        authorUrl: pkg.author.url,
-        fundingUrl: pkg.funding,
         ...pkg.obsidian,
       };
       this.emitFile({ type: "asset", fileName: ".hotReload", source: "" });
