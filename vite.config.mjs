@@ -3,13 +3,14 @@ import builtins from "builtin-modules";
 import { resolve } from "node:path";
 import { readFileSync } from "node:fs";
 
-const outDir = ""; // TODO
+const outDir = "MyVault/.obsidian/plugins/obsidian-vite-template"; // TODO: change me!
 
 export default defineConfig({
   plugins: [writeObsidianAssets()],
   build: {
     outDir,
     target: "es2018",
+    emptyOutDir: true,
     cssCodeSplit: true,
     lib: {
       entry: ["src/main.ts", "src/styles.css"],
@@ -68,7 +69,7 @@ function writeObsidianAssets() {
         fundingUrl: pkg.funding,
         ...pkg.obsidian,
       };
-      this.emitFile({ type: "asset", fileName: ".hotReload" });
+      this.emitFile({ type: "asset", fileName: ".hotReload", source: "" });
       this.emitFile({
         type: "asset",
         fileName: "manifest.json",
